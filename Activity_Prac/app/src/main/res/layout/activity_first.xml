@@ -57,23 +57,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+
+        <Button
+            android:id="@+id/Thirdbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세번째 액티비티에 데이터 전달"
+            tools:layout_editor_absoluteX="182dp"
+            tools:layout_editor_absoluteY="422dp" />
+
+        <EditText
+            android:id="@+id/edit_data"
+            android:layout_width="167dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:hint="데이터 입력"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="428dp" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/Thirdbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="세번째 액티비티에 데이터 전달"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="422dp" />
-
-    <EditText
-        android:id="@+id/edit_data"
-        android:layout_width="167dp"
-        android:layout_height="42dp"
-        android:layout_weight="1"
-        android:hint="데이터 입력"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="428dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
