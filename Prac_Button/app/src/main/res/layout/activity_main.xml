@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff0000"
+        android:latout_weight="1" >
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="L|T"
+            android:gravity="left|top"
+            android:layout_gravity="left" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="C_H|T"
+            android:gravity="center_horizontal|top"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="R|T"
+            android:gravity="right|top"
+            android:layout_gravity="right" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="L|C_V"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center_vertical" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="CENTER"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="R|C_V"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="L|B"
+            android:layout_gravity="bottom"
+            android:gravity="bottom|left" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="C_H|B"
+            android:layout_gravity="center_horizontal|bottom"
+            android:gravity="center_horizontal|bottom" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="R|B"
+            android:layout_gravity="bottom|right"
+            android:gravity="bottom|right" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
