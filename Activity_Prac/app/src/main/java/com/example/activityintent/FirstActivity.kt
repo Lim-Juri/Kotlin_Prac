@@ -18,27 +18,28 @@ class FirstActivity : AppCompatActivity() {
         Log.i(TAG, "onCreate()")
 
         val button1 = findViewById<Button>(R.id.button)
-        button1.setOnClickListener{
+        button1.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
 
         val call = findViewById<Button>(R.id.Thirdbutton)
-        call.setOnClickListener{
+        call.setOnClickListener {
             val edit_text = findViewById<EditText>(R.id.edit_data)
             val strData = edit_text.text.toString()
             val intent = Intent(this, ThirdActivity::class.java)
-            intent.putExtra("dataFromFirstActivity",strData)
+            intent.putExtra("dataFromFirstActivity", strData)
             startActivity(intent)
         }
     }
 
-    fun doOnBtnClick(v:View) {
-        when(v.getId()) {
+    fun doOnBtnClick(v: View) {
+        when (v.getId()) {
             R.id.DialActivity -> {
                 val call_intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:114"))
                 startActivity(call_intent)
             }
+
             R.id.MapActivity -> {
                 val map_intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:37.565350, 127.01445"))
                 startActivity(map_intent)
@@ -60,7 +61,7 @@ class FirstActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        Log.i(TAG,"onPause()")
+        Log.i(TAG, "onPause()")
     }
 
     override fun onStop() {
@@ -70,11 +71,11 @@ class FirstActivity : AppCompatActivity() {
 
     override fun onRestart() {
         super.onRestart()
-        Log.i(TAG,"onRestart")
+        Log.i(TAG, "onRestart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i(TAG,"onDestroy()")
+        Log.i(TAG, "onDestroy()")
     }
 }
