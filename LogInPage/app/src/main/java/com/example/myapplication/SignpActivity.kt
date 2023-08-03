@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,19 +13,38 @@ class SignpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signp)
 
-        val name = findViewById<EditText>(R.id.editname).text.toString()
-        val id = findViewById<EditText>(R.id.editid).text.toString()
-        val password = findViewById<EditText>(R.id.editpassword).text.toString()
         val button = findViewById<Button>(R.id.button3)
+        val name = findViewById<EditText>(R.id.editname)
+        val id = findViewById<EditText>(R.id.editid)
+        val password = findViewById<EditText>(R.id.editpassword)
+
         button.setOnClickListener {
 
-        if (name == "" || id == "" || password == "")
+            if (name.text.toString().isEmpty() && id.text.toString().isEmpty() && password.text.toString().isEmpty()) {
                 Toast.makeText(
                     this@SignpActivity,
                     "입력되지 않은 정보가 있습니다.",
                     Toast.LENGTH_SHORT
                 ).show()
-            else {
+            } else if (name.text.toString().isEmpty()) {
+                Toast.makeText(
+                    this@SignpActivity,
+                    "아이디와 비밀번호를 입력해주세요.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else if (id.text.toString().isEmpty()) {
+                Toast.makeText(
+                    this@SignpActivity,
+                    "아이디를 입력해주세요.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else if (password.text.toString().isEmpty()) {
+                Toast.makeText(
+                    this@SignpActivity,
+                    "비밀번호를 입력해주세요.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
                 finish()
             }
         }

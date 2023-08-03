@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="id_format"> 아이디: %s </string>
-    <string name="name_login"> 이름: %s </string>
 </resources>
