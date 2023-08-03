@@ -13,17 +13,34 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val log = findViewById<Button>(R.id.button)
-        log.setOnClickListener{
+        log.setOnClickListener {
             val edit_id = findViewById<EditText>(R.id.edit1).text.toString()
             val edit_password = findViewById<EditText>(R.id.edit2).text.toString()
 
-            if (edit_id == "" || edit_password == "")
+            if (edit_id.isBlank() && edit_password.isBlank()) {
                 Toast.makeText(
                     this@SignInActivity,
-                    "입력되지 않은 정보가 있습니다.",
+                    "아이디와 비밀번호를 입력해주세요.",
                     Toast.LENGTH_SHORT
-                ). show()
-            else {
+                ).show()
+            } else if (edit_id.isBlank()) {
+                Toast.makeText(
+                    this@SignInActivity,
+                    "아이디를 확인해주세요.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else if (edit_password.isBlank()) {
+                Toast.makeText(
+                    this@SignInActivity,
+                    "비밀번호를 확인해주세요.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                Toast.makeText(
+                    this@SignInActivity,
+                    "로그인 성공",
+                    Toast.LENGTH_SHORT
+                ).show()
                 val logintent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("dataFromSignInActivity", edit_id)
                 startActivity(logintent)
@@ -31,7 +48,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         val join = findViewById<Button>(R.id.button2)
-        join.setOnClickListener{
+        join.setOnClickListener {
             val joinintent = Intent(this, SignpActivity::class.java)
             startActivity(joinintent)
         }
