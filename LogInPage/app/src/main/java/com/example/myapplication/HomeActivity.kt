@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        var activityResultLauncher2 : ActivityResultLauncher<Intent>
+        var activityResultLauncher2: ActivityResultLauncher<Intent>
         val nic = findViewById<EditText>(R.id.edit_nic)
         val age = findViewById<EditText>(R.id.edit_age2)
         val mbti = findViewById<EditText>(R.id.edit_mbti2)
@@ -43,24 +43,19 @@ class HomeActivity : AppCompatActivity() {
         editmbti.text = getString(R.string.mbti_format, strData3)
 
         activityResultLauncher2 =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
                 if (it.resultCode == RESULT_OK) {
-                    val nn=it.data?.getStringExtra("nic") ?: ""
+                    val nn = it.data?.getStringExtra("nic") ?: ""
                     nic.setText(nn)
-                    val gg=it.data?.getStringExtra("age") ?: ""
+                    val gg = it.data?.getStringExtra("age") ?: ""
                     age.setText(gg)
-                    val mm=it.data?.getStringExtra("mbti") ?: ""
+                    val mm = it.data?.getStringExtra("mbti") ?: ""
                     mbti.setText(mm)
                 }
             }
 
-        activityResultLauncher2.launch(intent)
-
-
-
         clickend.setOnClickListener {
             finish()
-
         }
 
         val imageLayout = findViewById<ConstraintLayout>(R.id.back_all)

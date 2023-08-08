@@ -15,7 +15,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var activityResultLauncher : ActivityResultLauncher<Intent>
+        var activityResultLauncher: ActivityResultLauncher<Intent>
         val edit_id = findViewById<EditText>(R.id.edit1)
         val edit_password = findViewById<EditText>(R.id.edit2)
         val log = findViewById<Button>(R.id.button)
@@ -58,11 +58,12 @@ class SignInActivity : AppCompatActivity() {
                 ).show()
 
                 val toss = Intent(this, IntroActivity::class.java)
+                toss.putExtra("dataFromSignInActivity", edit_id.text.toString())
                 startActivity(toss)
 
-                val logintent = Intent(this, HomeActivity::class.java)
-                logintent.putExtra("dataFromSignInActivity", edit_id.text.toString())
-                setResult(RESULT_OK, logintent)
+//                val logintent = Intent(this, HomeActivity::class.java)
+//                logintent.
+//                setResult(RESULT_OK, logintent)
             }
         }
 

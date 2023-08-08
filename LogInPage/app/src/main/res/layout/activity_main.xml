@@ -13,23 +13,23 @@
         android:layout_width="wrap_content"
         android:layout_height="330dp"
         android:src="@drawable/cute1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/signup_id"
-        android:fontFamily="@font/ef"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/ef"
+        android:text="@string/signup_id"
         android:textColor="@color/gray"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/edit1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cut" />
 
     <EditText
@@ -39,26 +39,25 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/ef"
-        android:inputType="text"
         android:hint="@string/signup_name"
+        android:inputType="text"
         android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/text1"/>
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
 
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/signIn_pw"
-        android:textStyle="bold"
-        android:fontFamily="@font/ef"
-        android:textColor="@color/gray"
-        app:layout_constraintTop_toBottomOf="@+id/edit1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
-        />
+        android:fontFamily="@font/ef"
+        android:text="@string/signIn_pw"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit1" />
 
 
     <EditText
@@ -67,39 +66,38 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:inputType="textPassword"
         android:fontFamily="@font/ef"
         android:hint="@string/signIn_pw_et"
+        android:inputType="textPassword"
         android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/text2"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/text2" />
 
 
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/signIn_login"
-        android:fontFamily="@font/ef"
-        app:layout_constraintTop_toBottomOf="@+id/edit2"
-        android:layout_marginTop="32dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginRight="24dp"
+        android:fontFamily="@font/ef"
+        android:text="@string/signIn_login"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/edit2" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/signIn_signup"
+        android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="24dp"
         android:fontFamily="@font/ef"
-        android:layout_marginLeft="24dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/signIn_signup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

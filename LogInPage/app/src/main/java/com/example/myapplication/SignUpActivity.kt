@@ -18,7 +18,9 @@ class SignUpActivity : AppCompatActivity() {
 
         button.setOnClickListener {
 
-            if (name.text.toString().isEmpty() && id.text.toString().isEmpty() && password.text.toString().isEmpty()) {
+            if (name.text.toString().isEmpty() && id.text.toString()
+                    .isEmpty() && password.text.toString().isEmpty()
+            ) {
                 Toast.makeText(
                     this@SignUpActivity,
                     "입력되지 않은 정보가 있습니다.",
@@ -44,7 +46,7 @@ class SignUpActivity : AppCompatActivity() {
                 ).show()
             } else {
                 intent.putExtra("id", id.text.toString())
-                intent.putExtra("password",password.text.toString())
+                intent.putExtra("password", password.text.toString())
                 setResult(RESULT_OK, intent)
                 finish()
             }
