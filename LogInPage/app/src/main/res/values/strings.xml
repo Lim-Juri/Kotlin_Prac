@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="id_format"> 아이디: %s </string>
+    <string name="ki_format"> 별명: %s </string>
+    <string name="age_format"> 나이: %s </string>
+    <string name="mbti_format"> MBTI: %s </string>
     <string name="signup_name">아이디를 입력하세요.</string>
     <string name="signup_id">아이디</string>
     <string name="signIn_pw">비밀번호</string>
@@ -8,4 +11,5 @@
     <string name="signIn_login">로그인</string>
     <string name="signIn_signup">회원가입</string>
     <string name="home_finish">종료</string>
+    <string name="home_id">아이디:</string>
 </resources>

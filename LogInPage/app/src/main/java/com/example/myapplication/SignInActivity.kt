@@ -57,9 +57,12 @@ class SignInActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
 
+                val toss = Intent(this, IntroActivity::class.java)
+                startActivity(toss)
+
                 val logintent = Intent(this, HomeActivity::class.java)
                 logintent.putExtra("dataFromSignInActivity", edit_id.text.toString())
-                startActivity(logintent)
+                setResult(RESULT_OK, logintent)
             }
         }
 
@@ -73,5 +76,4 @@ class SignInActivity : AppCompatActivity() {
 
         }
     }
-
 }
