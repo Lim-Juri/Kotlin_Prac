@@ -32,19 +32,19 @@ class SignInActivity : AppCompatActivity() {
 
         log.setOnClickListener {
 
-            if (edit_id.text.toString().isBlank() && edit_password.text.toString().isBlank()) {
+            if (edit_id.text.toString().isNotBlank() && edit_password.text.toString().isNotBlank()) {
                 Toast.makeText(
                     this@SignInActivity,
                     "아이디와 비밀번호를 입력해주세요.",
                     Toast.LENGTH_SHORT
                 ).show()
-            } else if (edit_id.text.toString().isBlank()) {
+            } else if (edit_id.text.toString().isNotBlank()) {
                 Toast.makeText(
                     this@SignInActivity,
                     "아이디를 확인해주세요.",
                     Toast.LENGTH_SHORT
                 ).show()
-            } else if (edit_password.text.toString().isBlank()) {
+            } else if (edit_password.text.toString().isNotBlank()) {
                 Toast.makeText(
                     this@SignInActivity,
                     "비밀번호를 확인해주세요.",
@@ -61,9 +61,6 @@ class SignInActivity : AppCompatActivity() {
                 toss.putExtra("dataFromSignInActivity", edit_id.text.toString())
                 startActivity(toss)
 
-//                val logintent = Intent(this, HomeActivity::class.java)
-//                logintent.
-//                setResult(RESULT_OK, logintent)
             }
         }
 
