@@ -18,33 +18,34 @@ class SignUpActivity : AppCompatActivity() {
 
         button.setOnClickListener {
 
-            if (name.text.toString().isNotEmpty() && id.text.toString()
-                    .isNotEmpty() && password.text.toString().isNotEmpty()
+            if (name.text.toString().isEmpty() || id.text.toString()
+                    .isEmpty() || password.text.toString().isEmpty()
             ) {
                 Toast.makeText(
                     this@SignUpActivity,
                     "입력되지 않은 정보가 있습니다.",
                     Toast.LENGTH_SHORT
                 ).show()
-            } else if (name.text.toString().isNotEmpty()) {
+            } else if (name.text.toString().isEmpty()) {
                 Toast.makeText(
                     this@SignUpActivity,
                     "아이디와 비밀번호를 입력해주세요.",
                     Toast.LENGTH_SHORT
                 ).show()
-            } else if (id.text.toString().isNotEmpty()) {
+            } else if (id.text.toString().isEmpty()) {
                 Toast.makeText(
                     this@SignUpActivity,
                     "아이디를 입력해주세요.",
                     Toast.LENGTH_SHORT
                 ).show()
-            } else if (password.text.toString().isNotEmpty()) {
+            } else if (password.text.toString().isEmpty()) {
                 Toast.makeText(
                     this@SignUpActivity,
                     "비밀번호를 입력해주세요.",
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
+                Toast.makeText(this@SignUpActivity, "로그인 성공!", Toast.LENGTH_SHORT).show()
                 intent.putExtra("id", id.text.toString())
                 intent.putExtra("password", password.text.toString())
                 setResult(RESULT_OK, intent)

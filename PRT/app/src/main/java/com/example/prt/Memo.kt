@@ -2,15 +2,19 @@ package com.example.prt
 
 
 fun main() {
-    val a = readLine()!!
-    val result = solution(a)
-    println(result.joinToString(","))
+    val n = readLine()!!.toInt()
+    val k = readLine()!!.toInt()
+    val result = n * 12000 + k * 2000 - n / 10 * 2000
+    println("$result")
 }
 
-fun solution(my_string: String): IntArray {
-    return my_string.filter { it.isDigit() }
-        .map { it.digitToInt() }
-        .sorted().toIntArray()
+
+class Solution {
+    fun solution(n: Int, k: Int): Int {
+        return (n * 12000) + (k * 2000) - (n / 10 * 2000)
+    }
 }
+
+
 
 

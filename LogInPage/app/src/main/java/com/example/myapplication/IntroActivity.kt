@@ -22,7 +22,7 @@ class IntroActivity : AppCompatActivity() {
         val strData = intent.getStringExtra("dataFromSignInActivity")
 
         button.setOnClickListener {
-            if (nic.text.toString().isNotEmpty() || age.text.toString().isNotEmpty() || mbti.text.toString().isNotEmpty()
+            if (nic.text.toString().isEmpty() || age.text.toString().isEmpty() || mbti.text.toString().isEmpty()
             ) {
                 Toast.makeText(
                     this@IntroActivity,

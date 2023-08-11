@@ -13,10 +13,13 @@
         android:theme="@style/Theme.Sponge_SignInActivity"
         tools:targetApi="31">
         <activity
-            android:name=".Sponge_LogInActivity"
+            android:name=".Sponge_MainActivity"
             android:exported="false" />
         <activity
             android:name=".Sponge_SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Sponge_LogInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

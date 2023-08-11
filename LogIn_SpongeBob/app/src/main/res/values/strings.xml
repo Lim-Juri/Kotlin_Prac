@@ -9,4 +9,7 @@
     <string name="type_password">비밀번호를 입력해주세요.</string>
     <string name="type_number">휴대폰 번호를 입력해주세요.</string>
     <string name="type_email">이메일을 입력해주세요.</string>
+    <string name="name_format"> %s </string>
+    <string name="email_format"> %s </string>
+    <string name="phone_format"> %s </string>
 </resources>

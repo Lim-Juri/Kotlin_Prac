@@ -32,19 +32,19 @@ class SignInActivity : AppCompatActivity() {
 
         log.setOnClickListener {
 
-            if (edit_id.text.toString().isNotBlank() && edit_password.text.toString().isNotBlank()) {
+            if (edit_id.text.toString().isBlank() && edit_password.text.toString().isBlank()) {
                 Toast.makeText(
                     this@SignInActivity,
                     "아이디와 비밀번호를 입력해주세요.",
                     Toast.LENGTH_SHORT
                 ).show()
-            } else if (edit_id.text.toString().isNotBlank()) {
+            } else if (edit_id.text.toString().isBlank()) {
                 Toast.makeText(
                     this@SignInActivity,
                     "아이디를 확인해주세요.",
                     Toast.LENGTH_SHORT
                 ).show()
-            } else if (edit_password.text.toString().isNotBlank()) {
+            } else if (edit_password.text.toString().isBlank()) {
                 Toast.makeText(
                     this@SignInActivity,
                     "비밀번호를 확인해주세요.",
