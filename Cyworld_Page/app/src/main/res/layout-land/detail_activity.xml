@@ -21,45 +21,41 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintVertical_bias="0.8"
         app:srcCompat="@drawable/cw_main" />
 
     <Button
         android:id="@+id/mainbutton"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_marginBottom="150dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="30dp"
         android:background="@color/button"
-        android:rotation="-26"
+        android:rotation="-27"
         android:text="@string/mainbutton_msg"
         android:textColor="@color/pink"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/mypagebutton"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="-10dp"
+        android:layout_height="200dp"
         android:backgroundTint="@color/button"
+        android:layout_marginBottom="20dp"
         android:rotation="23"
         android:text="@string/mypagebutton_msg"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,12 +70,11 @@
         android:background="@color/button"
         android:text="@string/loginbutton_msg"
         android:textColor="@color/brown"
-        android:textSize="11sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
